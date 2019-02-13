@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:overScrollMode="never"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/RNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:background="#dcdcdc"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:onClick="fromdatemthd"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:textColor="#919191"
+                    android:text="@string/from"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fromTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="2dp"
+                    android:drawableEnd="@drawable/calendar"
+                    android:gravity="center|start"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:drawableRight="@drawable/calendar" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1.5dp"
+                android:layout_height="match_parent"
+                android:background="#c7c7c7" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="todatemthd"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:textColor="#919191"
+                    android:text="@string/to"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/toTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="2dp"
+                    android:drawableEnd="@drawable/calendar"
+                    android:gravity="center|start"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:drawableRight="@drawable/calendar" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/note_values"
+            android:textSize="12sp"
+            android:textColor="#c91212"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#c7c7c7"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="#919191"
+                android:gravity="bottom"
+                android:text="@string/total_rooms"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/TotalRoomTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/line_bottom_grey"
+                android:gravity="center"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="#919191"
+                android:gravity="bottom"
+                android:labelFor="@+id/AvlRoomET"
+                android:text="@string/available_rooms"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@id/AvlRoomET"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="3"
+                android:background="@drawable/line_bottom_grey"
+                android:gravity="center"
+                android:textSize="18sp"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="#919191"
+                android:gravity="bottom"
+                android:labelFor="@+id/RoomPriceET"
+                android:text="@string/room_price"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@id/RoomPriceET"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="5"
+                android:background="@drawable/line_bottom_grey"
+                android:gravity="center"
+                android:textSize="18sp"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="#919191"
+                android:gravity="bottom"
+                android:text="@string/block_inventory"
+                android:textSize="17sp" />
+
+            <Switch
+                android:id="@+id/blockswitch"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notevTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="15dp"
+            android:drawableRight="@drawable/ic_info"
+            android:textColor="#da0b0b"
+            android:text="@string/note"
+            android:drawableEnd="@drawable/ic_info" />
+
+        <TextView
+            android:id="@+id/noteTv"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:drawablePadding="15dp" />
+
+        <EditText
+            android:id="@+id/msgEt"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/box_grey"
+            android:padding="5dp"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:layout_margin="10dp"/>
+
+        <View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cacaca"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="@string/save"
+            android:onClick="submitdata"
+            android:textSize="17sp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:background="#087f23"/>
+
+    </LinearLayout>
+
+</ScrollView>

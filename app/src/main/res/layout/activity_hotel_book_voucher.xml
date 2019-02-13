@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/voucher_header"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/hotel_details"
+            android:textColor="@android:color/holo_orange_dark"
+            android:background="#f5f5f5"
+            android:gravity="center"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="35dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="@string/hotel_name"/>
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#fff"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.75"
+                android:layout_height="match_parent"
+                android:text="@string/phone_number"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="1dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:gravity="center"
+                android:layout_marginLeft="1dp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="#eee"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="5dp"
+            card_view:contentPadding="2dp"
+            card_view:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp">
+
+                <TextView
+                    android:id="@+id/HNameTV"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.05"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#fff"/>
+
+                <TextView
+                    android:id="@+id/HMobTv"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.75"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:autoLink="phone"
+                    android:textColorLink="#000"
+                    android:textIsSelectable="true"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginLeft="1dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/booking_details"
+            android:textColor="@android:color/holo_orange_dark"
+            android:background="#f5f5f5"
+            android:gravity="center"
+            android:textSize="22sp" />
+
+        <include layout="@layout/hotel_book_part"/>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tripnetra"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:background="#f5f5f5"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address_string"
+            android:gravity="center"
+            android:background="#f5f5f5"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#eaeaea"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/custReTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#fdab7c"
+                android:textColor="#000"
+                android:visibility="visible"
+                android:onClick="custresendmthd"
+                android:text="@string/resend_to_customer"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:id="@+id/suppReTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#fdab7c"
+                android:textColor="#000"
+                android:text="@string/resend_to_supplier"
+                android:onClick="suppresendmthd"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:visibility="visible"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#eaeaea"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancelTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#fdab7c"
+                android:textColor="#000"
+                android:text="@string/cancel_booking"
+                android:gravity="center"
+                android:onClick="cancelbookmthd"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:id="@+id/rejectTv"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#fdab7c"
+                android:textColor="#000"
+                android:text="@string/reject_booking"
+                android:gravity="center"
+                android:onClick="cancelbookmthd"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_height="40dp"
+                android:layout_margin="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

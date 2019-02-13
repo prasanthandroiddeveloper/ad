@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/mainlayt"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2B5B83"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:gravity="center|top"
+            android:layout_gravity="center|top"
+            android:src="@drawable/logo1"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="@string/logoimage"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/autocompTv"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:background="@drawable/whiteborder"
+            android:inputType="text"
+            android:layout_margin="15dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:drawableEnd="@drawable/loc_blue"
+            android:gravity="center|start"
+            android:textSize="20sp"
+            android:hint="@string/hotel_name"
+            android:textColorHint="@color/colorPrimary"
+            android:drawableRight="@drawable/loc_blue" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:background="#ffa000"
+            android:textColor="@android:color/white"
+            android:text="@string/search"/>
+
+</LinearLayout>

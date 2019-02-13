@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tripnetra.tnadmin">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".utils.G46567"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="java-lang-programming"
+                    android:scheme="android-app-google-plus-demo" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DashBoardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".payments.PaymentVoucherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inventory.Hotel_Invtry_Details_Act"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inventory.Hotel_Manage_Invtry_Act"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bookings.HotelBookVoucherAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bookings.CarBookVoucherAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bookings.TourBookVoucherAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".logs.LogViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inventory.Car_Invtry_Details_Act"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".inventory.Car_Manage_Invtry_Act"
+            android:screenOrientation="portrait" />
+        <activity android:name=".logs.Link_InfoActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+    </application>
+
+</manifest>

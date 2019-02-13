@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/maingrp">
+
+        <item
+            android:id="@+id/nav_inventory"
+            android:icon="@drawable/home_black"
+            android:checkable="true"
+            android:title="@string/hot_inventory" />
+
+        <item
+            android:title="@string/car_inventory"
+            android:id="@+id/Carinv"
+            android:icon="@drawable/pray"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/pricereps"
+            android:icon="@drawable/prices"
+            android:checkable="true"
+            android:title="@string/payment_reports" />
+
+    </group>
+
+    <item android:title="@string/bookings">
+
+        <menu>
+
+            <group android:id="@+id/bookinggrp">
+
+                <item
+                    android:id="@+id/hotelbookings"
+                    android:icon="@drawable/tag"
+                    android:checkable="true"
+                    android:title="@string/hotel_booking_reports" />
+
+                <item
+                    android:id="@+id/carbookings"
+                    android:icon="@drawable/tag"
+                    android:checkable="true"
+                    android:title="@string/car_booking_reports" />
+
+                <item
+                    android:id="@+id/tourbookings"
+                    android:icon="@drawable/tag"
+                    android:checkable="true"
+                    android:title="@string/tour_booking_reports" />
+                <item
+                    android:id="@+id/darbookings"
+                    android:icon="@drawable/tag"
+                    android:checkable="true"
+                    android:title="@string/darshan_booking_reports" />
+                <item
+                    android:id="@+id/cancels"
+                    android:icon="@drawable/block_black"
+                    android:checkable="true"
+                    android:title="@string/cancellations" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <group android:id="@+id/loggrp">
+
+        <item
+            android:title="@string/data_log"
+            android:id="@+id/logdata"
+            android:icon="@drawable/description_black"
+            android:checkable="true"/>
+        <item
+            android:title="@string/link"
+            android:id="@+id/link"
+            android:icon="@drawable/tag"
+            android:checkable="true"/>
+
+    </group>
+
+</menu>
+
+
+    <!--<item
+               android:id="@+id/nav_about_us"
+               android:title="Contact us" >
+               <menu>
+                   <item android:title="Contact us" />
+               </menu>
+           </item>-->
